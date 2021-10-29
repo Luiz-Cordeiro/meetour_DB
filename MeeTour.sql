@@ -1,9 +1,9 @@
 CREATE TABLE usuario (
 	u_id 				SERIAL				NOT NULL,
-	cpf					INTEGER				UNIQUE		NOT NULL,
+	cpf				INTEGER				UNIQUE		NOT NULL,
 	senha				VARCHAR(10)			NOT NULL,
 	u_nome				VARCHAR(30)			NOT NULL,
-	data_nascimento		DATE				NOT NULL,
+	data_nascimento			DATE				NOT NULL,
 	idade				INTEGER, 
 	email				VARCHAR(30)			UNIQUE		NOT NULL,
 	meet_rank			VARCHAR(15),
@@ -11,8 +11,8 @@ CREATE TABLE usuario (
 	numero_ref			INTEGER,
 	rua_ref				VARCHAR(30),
 	cep_ref				INTEGER,
-	latitude_ref		DOUBLE PRECISION,
-	longitude_ref		DOUBLE PRECISION,
+	latitude_ref			DOUBLE PRECISION,
+	longitude_ref			DOUBLE PRECISION,
 	
 	CONSTRAINT usuario_pk
 		PRIMARY KEY (u_id)
@@ -33,11 +33,11 @@ CREATE TABLE localidade (
 	numero_ref			INTEGER,
 	rua_end				VARCHAR(30)			NOT NULL,
 	cep_end				INTEGER				NOT NULL,
-	latitude_end		DOUBLE PRECISION	NOT NULL,
-	longitude_end		DOUBLE PRECISION	NOT NULL,
-	acess_fisica		BOOLEAN,
-	acess_visual		BOOLEAN,
-	acess_auditiva		BOOLEAN,
+	latitude_end			DOUBLE PRECISION	NOT NULL,
+	longitude_end			DOUBLE PRECISION	NOT NULL,
+	acess_fisica			BOOLEAN,
+	acess_visual			BOOLEAN,
+	acess_auditiva			BOOLEAN,
 	
 	CONSTRAINT localidade_pk
 		PRIMARY KEY (l_id)
