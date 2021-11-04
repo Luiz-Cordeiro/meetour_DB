@@ -21,9 +21,9 @@ CREATE TABLE usuario (
 CREATE TABLE encontro (
 	e_id				SERIAL				NOT NULL,
 	e_data				DATE				NOT NULL,
-	e_nome				VARCHAR(60)			NOT NULL,
+	e_nome				TEXT				NOT NULL,
 	e_tema				VARCHAR(15)			NOT NULL,
-	e_descricao			VARCHAR(100)			NOT NULL,
+	e_descricao			TEXT				NOT NULL,
 	
 	CONSTRAINT encontro_pk
 		PRIMARY KEY (e_id)
