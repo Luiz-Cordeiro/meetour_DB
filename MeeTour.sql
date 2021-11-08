@@ -155,4 +155,23 @@ EXECUTE PROCEDURE calculaMediaHistorico();
 
 -----------------------------------------------------------
 
+-------------- VIEW QUE ORDENA AS INFORMAÇÕES DOS ENCONTROS POR DATA ---------------
+
+CREATE OR REPLACE VIEW encontros_por_data AS
+SELECT numero_ref,
+rua_end,
+cep_end,
+latitude_end,
+longitude_end,
+acess_fisica,
+acess_visual,
+acess_auditiva,
+l_nome,
+e_data,
+descricao
+FROM encontro_local el INNER JOIN localidade l
+ON (el.l_id = l.l_id) INNER JOIN encontro e
+ON (el.e_id = e.e_id)
+ORDER BY e_data
+
 
